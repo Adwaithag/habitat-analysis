@@ -1,56 +1,319 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Habitat Analysis Report</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Habitat Research Portfolio</title>
 
-    <style>
-        body {
-            font-family: Arial;
-            margin: 40px;
-            line-height: 1.6;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        h1 {
-            color: darkgreen;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f2;
+      color: #1f2937;
+      line-height: 1.7;
+    }
 
-        iframe {
-            width: 80%;
-            height: 450px;
-            border: none;
-        }
-    </style>
+    header {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      margin-bottom: 15px;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    nav {
+      background: #14532d;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 70px 12%;
+    }
+
+    h2 {
+      color: #14532d;
+      margin-bottom: 20px;
+      font-size: 2.2rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 15px;
+      margin-top: 20px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .stat-box {
+      background: #14532d;
+      color: white;
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .stat-box h3 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #14532d;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 50px;
+    }
+
+    @media(max-width: 768px){
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      section {
+        padding: 50px 8%;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>Habitat Analysis Report</h1>
+  <header>
+    <div style="position:absolute; top:20px; left:20px; display:flex; gap:20px; align-items:center;">
+      <img src="iisertirupati-logo.png" alt="IISER Tirupati Logo" style="height:70px; background:white; padding:8px; border-radius:12px;">
+      <img src="tnfd-logo.png" alt="TNFD Logo" style="height:70px; background:white; padding:8px; border-radius:12px;">
+    </div>
+    <div>
+      <h1>Habitat Research Portfolio</h1>
+      <p>
+        Ecological habitat documentation and forest structure interpretation using field observations, visual habitat surveys, and LiDAR-supported ecological analysis.
+      </p>
+    </div>
+  </header>
 
-<h2>Study Overview</h2>
-<p>
-This project presents habitat documentation and ecological interpretation based on field video recording.
-</p>
+  <nav>
+    <a href="#overview">Overview</a>
+    <a href="#video">Video</a>
+    <a href="#analysis">Analysis</a>
+    <a href="#findings">Findings</a>
+    <a href="#conclusion">Conclusion</a>
+  </nav>
 
-<h2>Video Documentation</h2>
+  <section id="overview">
+    <h2>Project Overview</h2>
+    <p>
+      This portfolio presents habitat documentation and ecological interpretation of forest structure using field recordings and observational analysis. The study focuses on vegetation density, canopy structure, habitat openness, and spatial heterogeneity across the surveyed landscape.
+    </p>
 
-<iframe 
-    src="https://drive.google.com/file/d/14n9kHZyQnLvRv5JK-XkrV4owBSZZPxbO/preview"
-    allow="autoplay">
-</iframe>
+    <div class="stats">
+      <div class="stat-box">
+        <h3>Field Survey</h3>
+        <p>Ground-based habitat documentation</p>
+      </div>
 
-<h2>Key Observations</h2>
-<ul>
-    <li>Variation in vegetation density across habitat</li>
-    <li>Differences in canopy structure and openness</li>
-    <li>Spatial heterogeneity observed in forest patch</li>
-    <li>Field-based ecological interpretation supported by video</li>
-</ul>
+      <div class="stat-box">
+        <h3>LiDAR Support</h3>
+        <p>3D forest structure interpretation</p>
+      </div>
 
-<h2>Conclusion</h2>
-<p>
-The habitat shows clear structural variation influenced by environmental gradients and vegetation distribution patterns.
-</p>
+      <div class="stat-box">
+        <h3>Ecological Analysis</h3>
+        <p>Canopy and habitat assessment</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="video">
+    <h2>Habitat Video Documentation</h2>
+
+    <iframe
+      src="https://drive.google.com/file/d/14n9kHZyQnLvRv5JK-XkrV4owBSZZPxbO/preview"
+      allow="autoplay">
+    </iframe>
+  </section>
+
+  <section id="gallery">
+    <h2>Field Documentation and Habitat Gallery</h2>
+
+    <div class="card-grid">
+
+      <div class="card">
+        <h3>Habitat Photographs</h3>
+        <p>
+          Add representative photographs of the forest habitat, vegetation structure, canopy condition, and field sampling plots here.
+        </p>
+        <img src="habitat-photo.jpg" alt="Habitat Photo" style="width:100%; border-radius:12px; margin-top:15px;">
+      </div>
+
+      <div class="card">
+        <h3>Field Team</h3>
+        <p>
+          Add photographs of the field team during habitat surveys, LiDAR data collection, and ecological fieldwork.
+        </p>
+        <img src="field-team.jpg" alt="Field Team" style="width:100%; border-radius:12px; margin-top:15px;">
+      </div>
+
+      <div class="card">
+        <h3>Forest Structure Documentation</h3>
+        <p>
+          Include photographs showing canopy layering, understory vegetation, and habitat variability.
+        </p>
+        <img src="forest-structure.jpg" alt="Forest Structure" style="width:100%; border-radius:12px; margin-top:15px;">
+      </div>
+
+    </div>
+  </section>
+
+  <section id="graphs">
+    <h2>Graphs and Ecological Results</h2>
+
+    <div class="card-grid">
+
+      <div class="card">
+        <h3>GBH Distribution</h3>
+        <p>Add your GBH graph image here.</p>
+        <img src="gbh-graph.png" alt="GBH Graph" style="width:100%; border-radius:12px; margin-top:15px;">
+      </div>
+
+      <div class="card">
+        <h3>Canopy Analysis</h3>
+        <p>Add canopy structure or vegetation density graphs here.</p>
+        <img src="canopy-graph.png" alt="Canopy Graph" style="width:100%; border-radius:12px; margin-top:15px;">
+      </div>
+
+      <div class="card">
+        <h3>Spatial Analysis</h3>
+        <p>Add habitat distribution or spatial ecology visualizations here.</p>
+        <img src="spatial-analysis.png" alt="Spatial Analysis" style="width:100%; border-radius:12px; margin-top:15px;">
+      </div>
+
+    </div>
+  </section>
+
+  <section id="analysis">
+    <h2>Ecological Analysis</h2>
+
+    <div class="card-grid">
+
+      <div class="card">
+        <h3>Vegetation Density</h3>
+        <p>
+          Variability in vegetation density was observed across habitat patches, indicating differences in canopy closure and understory structure.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Canopy Structure</h3>
+        <p>
+          Layered canopy structure and light penetration differences suggest ecological heterogeneity within the forest system.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Habitat Openness</h3>
+        <p>
+          Ground-level visibility and canopy openness varied spatially, reflecting microhabitat variation and terrain influence.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Field Observation</h3>
+        <p>
+          Visual field documentation supports interpretation of habitat complexity, vegetation continuity, and ecological gradients.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="findings">
+    <h2>Key Findings</h2>
+
+    <ul>
+      <li>Forest habitat exhibited heterogeneous structural composition.</li>
+      <li>Canopy layering influenced light penetration and understory visibility.</li>
+      <li>Vegetation density varied significantly across observed patches.</li>
+      <li>Habitat complexity suggests diverse ecological microenvironments.</li>
+      <li>Visual observations aligned with expected forest structural variation.</li>
+    </ul>
+  </section>
+
+  <section id="conclusion">
+    <h2>Conclusion</h2>
+
+    <p>
+      The habitat demonstrates clear structural and ecological variability influenced by vegetation density, canopy arrangement, and terrain conditions. Combined field observations and visual habitat documentation provide a strong foundation for ecological interpretation and future LiDAR-supported forest analysis.
+    </p>
+  </section>
+
+  <footer>
+    <p>Habitat Research Portfolio | Ecological Documentation and Forest Structure Analysis</p>
+  </footer>
 
 </body>
 </html>
