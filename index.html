@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Habitat Research Portfolio</title>
+  <title>LiDAR Forest Structure</title>
 
   <style>
     * {
@@ -20,17 +20,22 @@
     }
 
     header {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-      url('https://drive.google.com/file/d/1TOhLOaU82t6B4nX81MGQ23ikDvYiwpZ0/view?usp=drive_link');
+      background:
+      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('forest-bg.jpg');
+
       background-size: cover;
       background-position: center;
       color: white;
       height: 80vh;
+
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
+
       padding: 20px;
+      position: relative;
     }
 
     header h1 {
@@ -40,7 +45,7 @@
 
     header p {
       font-size: 1.3rem;
-      max-width: 800px;
+      max-width: 850px;
       margin: auto;
     }
 
@@ -89,6 +94,12 @@
       transform: translateY(-5px);
     }
 
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 15px;
+    }
+
     iframe {
       width: 100%;
       height: 500px;
@@ -129,7 +140,24 @@
       margin-top: 50px;
     }
 
+    .logos {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .logos img {
+      height: 70px;
+      background: white;
+      padding: 8px;
+      border-radius: 12px;
+    }
+
     @media(max-width: 768px){
+
       header h1 {
         font-size: 2.5rem;
       }
@@ -137,178 +165,265 @@
       section {
         padding: 50px 8%;
       }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      iframe {
+        height: 300px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <div style="position:absolute; top:20px; left:20px; display:flex; gap:20px; align-items:center;">
-      <img src="iisertirupati-logo.png" alt="IISER Tirupati Logo" style="height:70px; background:white; padding:8px; border-radius:12px;">
-      <img src="tnfd-logo.jpeg" alt="TNFD Logo" style="height:70px; background:white; padding:8px; border-radius:12px;">
+<header>
+
+  <div class="logos">
+    <img src="iisertirupati-logo.png" alt="IISER Tirupati Logo">
+    <img src="tnfd-logo.jpeg" alt="TNFD Logo">
+  </div>
+
+  <div>
+    <h1>LiDAR Forest Structure</h1>
+
+    <p>
+      Developing a LiDAR-based forest analysis system to detect individual trees,
+      estimate structural variables, and compare forest habitats using
+      ground-truth ecological data.
+    </p>
+  </div>
+
+</header>
+
+<nav>
+  <a href="#overview">Overview</a>
+  <a href="#video">3D View</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#graphs">Graphs</a>
+  <a href="#analysis">Analysis</a>
+  <a href="#findings">Findings</a>
+  <a href="#conclusion">Conclusion</a>
+</nav>
+
+<section id="overview">
+
+  <h2>Project Overview</h2>
+
+  <p>
+    A LiDAR-based forest analysis project focused on studying the structural
+    characteristics of forests in Kodaikanal using handheld LiDAR data and
+    ground-truth ecological measurements. The project includes 3D point cloud
+    visualization, canopy height model generation, individual tree detection,
+    GBH estimation, and comparative analysis for understanding forest structure
+    and habitat dynamics.
+  </p>
+
+  <div class="stats">
+
+    <div class="stat-box">
+      <h3>Field Survey</h3>
+      <p>Ground-based habitat documentation</p>
     </div>
-    <div>
-      <h1>LiDAR Forest Structure</h1>
+
+    <div class="stat-box">
+      <h3>LiDAR Support</h3>
+      <p>3D forest structure interpretation</p>
+    </div>
+
+    <div class="stat-box">
+      <h3>Ecological Analysis</h3>
+      <p>Canopy and habitat assessment</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="video">
+
+  <h2>LiDAR 3D View</h2>
+
+  <iframe
+    src="https://drive.google.com/file/d/14n9kHZyQnLvRv5JK-XkrV4owBSZZPxbO/preview"
+    allow="autoplay">
+  </iframe>
+
+</section>
+
+<section id="gallery">
+
+  <h2>Field Documentation and Habitat Gallery</h2>
+
+  <div class="card-grid">
+
+    <div class="card">
+      <h3>Habitat Photographs</h3>
+
       <p>
-        Developing a LiDAR-based forest analysis system to detect individual trees, estimate structural variables, and compare forest habitats using ground-truth ecological data.
+        Forest habitat photographs showing vegetation structure,
+        canopy cover, and habitat characteristics.
       </p>
+
+      <img src="habitat.jpg" alt="Habitat Photo">
     </div>
-  </header>
 
-  <nav>
-    <a href="#overview">Overview</a>
-    <a href="#video">Video</a>
-    <a href="#analysis">Analysis</a>
-    <a href="#findings">Findings</a>
-    <a href="#conclusion">Conclusion</a>
-  </nav>
+    <div class="card">
+      <h3>Field Team</h3>
 
-  <section id="overview">
-    <h2>Project Overview</h2>
-    <p>
-      A LiDAR-based forest analysis project focused on studying the structural characteristics of forests in Kodaikanal using handheld LiDAR data and ground-truth ecological measurements. The project includes 3D point cloud visualization, canopy height model generation, individual tree detection, GBH estimation, and comparative analysis for understanding forest structure and habitat dynamics.
-    </p>
+      <p>
+        Field team involved in ecological surveys,
+        LiDAR data collection, and habitat assessment.
+      </p>
 
-    <div class="stats">
-      <div class="stat-box">
-        <h3>Field Survey</h3>
-        <p>Ground-based habitat documentation</p>
-      </div>
-
-      <div class="stat-box">
-        <h3>LiDAR Support</h3>
-        <p>3D forest structure interpretation</p>
-      </div>
-
-      <div class="stat-box">
-        <h3>Ecological Analysis</h3>
-        <p>Canopy and habitat assessment</p>
-      </div>
+      <img src="field-team.jpeg" alt="Field Team">
     </div>
-  </section>
 
-  <section id="video">
-    <h2>LiDAR 3D View</h2>
+    <div class="card">
+      <h3>Forest Structure Documentation</h3>
 
-    <iframe
-      src="https://drive.google.com/file/d/14n9kHZyQnLvRv5JK-XkrV4owBSZZPxbO/preview"
-      allow="autoplay">
-    </iframe>
-  </section>
+      <p>
+        Visual representation of canopy layering,
+        understory vegetation, and vertical structure.
+      </p>
 
-  <section id="gallery">
-    <h2>Field Documentation and Habitat Gallery</h2>
+      <img src="vertical-forest-structure.jpeg" alt="Forest Structure">
+    </div>
 
-    <div class="card-grid">
+  </div>
 
-      <div class="card">
-        <h3>Habitat Photographs</h3>
-        <p>
-          Add representative photographs of the forest habitat, vegetation structure, canopy condition, and field sampling plots here.
-        </p>
-        <img src="Habitat.jpg" alt="Habitat Photo" style="width:100%; border-radius:12px; margin-top:15px;">
-      </div>
+</section>
 
-      <div class="card">
-        <h3>Field Team</h3>
-        <p>
-          Add photographs of the field team during habitat surveys, LiDAR data collection, and ecological fieldwork.
-        </p>
-        <img src="Field Team.jpeg" alt="Field Team" style="width:100%; border-radius:12px; margin-top:15px;">
-      </div>
+<section id="graphs">
 
-      <div class="card">
-        <h3>Forest Structure Documentation</h3>
-        <p>
-          Include photographs showing canopy layering, understory vegetation, and habitat variability.
-        </p>
-        <img src="Vertical Forest Structure.jpeg" alt="Forest Structure" style="width:100%; border-radius:12px; margin-top:15px;">
-      </div>
+  <h2>Graphs and Ecological Results</h2>
+
+  <div class="card-grid">
+
+    <div class="card">
+
+      <h3>GBH VS Height</h3>
+
+      <p>
+        Relationship between tree girth and height
+        measured during field assessment.
+      </p>
+
+      <img src="height-vs-gbh.jpeg" alt="GBH Graph">
 
     </div>
-  </section>
 
-  <section id="graphs">
-    <h2>Graphs and Ecological Results</h2>
+    <div class="card">
 
-    <div class="card-grid">
+      <h3>Spatial Distribution of Trees</h3>
 
-      <div class="card">
-        <h3>GBH VS Height</h3>
-        <p>Add your GBH graph image here.</p>
-        <img src="Height Vs GBH.jpeg" alt="GBH Graph" style="width:100%; border-radius:12px; margin-top:15px;">
-      </div>
+      <p>
+        Spatial representation of individual tree positions
+        identified during habitat analysis.
+      </p>
 
-      <div class="card">
-        <h3>Spatial distribution of trees</h3>
-        <p>Add canopy structure or vegetation density graphs here.</p>
-        <img src="Spatial distribution of trees.jpeg" alt="Spatial distribution Graph" style="width:100%; border-radius:12px; margin-top:15px;">
-      </div>
-
-    
-    </div>
-  </section>
-
-  <section id="analysis">
-    <h2>Ecological Analysis</h2>
-
-    <div class="card-grid">
-
-      <div class="card">
-        <h3>Vegetation Density</h3>
-        <p>
-          The vegetation density analysis helped identify areas with dense canopy cover as well as more open regions within the forests of Kodaikanal. Using handheld LiDAR data, the study provided a detailed view of tree distribution, canopy structure, and overall forest complexity through 3D visualization and canopy height models, helping better understand the variation in vegetation across the landscape.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Canopy Structure</h3>
-        <p>
-          The canopy structure analysis focused on understanding the vertical profile and layering of the forest in Kodaikanal. By using LiDAR-derived canopy height models and 3D point cloud data, the study highlighted differences in tree height, canopy continuity, and structural variation within the forest, providing insights into habitat complexity and forest architecture.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Habitat Openness</h3>
-        <p>
-          The habitat openness analysis helped identify areas with closed canopy cover and more open forest patches within the study area in Kodaikanal. Using LiDAR-derived structural data, the analysis provided insights into light availability, canopy gaps, and spatial variation in forest openness, helping better understand habitat conditions and vegetation patterns across the landscape.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Field Observation</h3>
-        <p>
-          Visual field documentation supports interpretation of habitat complexity, vegetation continuity, and ecological gradients.
-        </p>
-      </div>
+      <img src="spatial-distribution.jpeg" alt="Spatial Distribution">
 
     </div>
-  </section>
 
-  <section id="findings">
-    <h2>Key Findings</h2>
+  </div>
 
-    <ul>
-      <li>Dense and multi-layered canopy structure observed across major parts of Bombay Shola</li>
-      <li>LiDAR data effectively captured forest structure and habitat complexity in 3D</li>
-      <li>Open canopy patches and dense vegetation zones were clearly distinguishable</li>
-      <li>Ground observations supported the accuracy of LiDAR-derived forest structural analysis</li>
-    </ul>
-  </section>
+</section>
 
-  <section id="conclusion">
-    <h2>Conclusion</h2>
+<section id="analysis">
 
-    <p>
-      This project showed how handheld LiDAR can be used as an effective tool to study and visualize forest structure in Kodaikanal. By combining LiDAR data with field observations, it was possible to identify individual trees, estimate tree height and GBH, and better understand variations in vegetation density, canopy structure, and habitat openness within the forest. The 3D analysis provided a clearer picture of how different parts of the forest vary in terms of canopy cover and structural complexity. Overall, the study highlights the usefulness of LiDAR technology for ecological research, habitat assessment, and long-term forest monitoring in complex shola forest ecosystems.
-    </p>
-  </section>
+  <h2>Ecological Analysis</h2>
 
-  <footer>
-    <p>Lidar Habitat Structure | Ecological Documentation and Forest Structure Analysis</p>
-  </footer>
+  <div class="card-grid">
+
+    <div class="card">
+
+      <h3>Vegetation Density</h3>
+
+      <p>
+        LiDAR-derived vegetation density analysis highlighted
+        differences in canopy closure, understory structure,
+        and forest complexity across the study site.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Canopy Structure</h3>
+
+      <p>
+        The canopy structure analysis revealed variation
+        in tree height, canopy continuity, and vertical layering
+        within the forest ecosystem.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Habitat Openness</h3>
+
+      <p>
+        Habitat openness analysis identified canopy gaps,
+        light penetration patterns, and variation in forest openness.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Field Observation</h3>
+
+      <p>
+        Ground observations supported the interpretation
+        of forest structure and ecological variability.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="findings">
+
+  <h2>Key Findings</h2>
+
+  <ul>
+    <li>Dense and multi-layered canopy structure observed across Bombay Shola.</li>
+    <li>LiDAR data effectively captured forest structure in 3D.</li>
+    <li>Canopy gaps and dense vegetation zones were clearly distinguishable.</li>
+    <li>Ground observations supported LiDAR-derived habitat analysis.</li>
+  </ul>
+
+</section>
+
+<section id="conclusion">
+
+  <h2>Conclusion</h2>
+
+  <p>
+    This project demonstrated the usefulness of handheld LiDAR
+    for forest structure analysis and ecological interpretation
+    in the shola forests of Kodaikanal. By combining LiDAR data
+    with field observations, the study provided insights into
+    vegetation density, canopy structure, habitat openness,
+    and forest complexity.
+  </p>
+
+</section>
+
+<footer>
+
+  <p>
+    LiDAR Forest Structure | Ecological Documentation and Forest Analysis
+  </p>
+
+</footer>
 
 </body>
 </html>
-
