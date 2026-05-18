@@ -3,8 +3,8 @@
 
 <head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>LiDAR Forest Structure</title>
 
@@ -22,7 +22,7 @@
 
     body{
       font-family:Arial, sans-serif;
-      background:#f4f7f2;
+      background:#edf2ec;
       color:#1f2937;
       line-height:1.7;
     }
@@ -32,14 +32,13 @@
     header{
 
       background:
-      linear-gradient(
-      rgba(0,0,0,0.65),
-      rgba(0,0,0,0.65)),
-      url("front-page.jpg");
+      linear-gradient(rgba(0,0,0,0.55),
+      rgba(0,0,0,0.55)),
+
+      url("https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1600&auto=format&fit=crop");
 
       background-size:cover;
       background-position:center;
-      background-attachment:fixed;
 
       height:100vh;
 
@@ -59,41 +58,16 @@
     }
 
     header h1{
-
       font-size:5rem;
       margin-bottom:20px;
-
+      letter-spacing:2px;
       text-shadow:0 5px 15px rgba(0,0,0,0.5);
     }
 
     header p{
-
-      font-size:1.4rem;
-      text-shadow:0 3px 10px rgba(0,0,0,0.5);
-    }
-
-    .hero-btn{
-
-      display:inline-block;
-      margin-top:35px;
-
-      background:#22c55e;
-      color:white;
-
-      padding:15px 35px;
-
-      border-radius:50px;
-      text-decoration:none;
-
-      font-weight:bold;
-      font-size:1.1rem;
-
-      transition:0.3s;
-    }
-
-    .hero-btn:hover{
-      background:#16a34a;
-      transform:translateY(-3px);
+      font-size:1.35rem;
+      line-height:1.9;
+      text-shadow:0 2px 8px rgba(0,0,0,0.5);
     }
 
     /* LOGOS */
@@ -105,7 +79,7 @@
       left:20px;
 
       display:flex;
-      gap:20px;
+      gap:18px;
     }
 
     .logos img{
@@ -115,8 +89,6 @@
 
       padding:8px;
       border-radius:12px;
-
-      box-shadow:0 5px 15px rgba(0,0,0,0.25);
     }
 
     /* NAVBAR */
@@ -124,15 +96,13 @@
     nav{
 
       background:#14532d;
-
       padding:18px;
-      text-align:center;
 
       position:sticky;
       top:0;
       z-index:1000;
 
-      box-shadow:0 3px 10px rgba(0,0,0,0.2);
+      text-align:center;
     }
 
     nav a{
@@ -140,7 +110,7 @@
       color:white;
       text-decoration:none;
 
-      margin:0 18px;
+      margin:0 20px;
       font-weight:bold;
       font-size:1rem;
     }
@@ -152,15 +122,19 @@
     /* SECTIONS */
 
     section{
-      padding:80px 12%;
+      padding:80px 10%;
     }
 
     h2{
 
       color:#14532d;
-      margin-bottom:25px;
+      margin-bottom:30px;
 
-      font-size:2.5rem;
+      font-size:2.7rem;
+    }
+
+    p{
+      font-size:1.05rem;
     }
 
     /* STATS */
@@ -168,9 +142,9 @@
     .stats{
 
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 
-      gap:20px;
+      gap:25px;
       margin-top:40px;
     }
 
@@ -184,10 +158,11 @@
 
       text-align:center;
 
-      box-shadow:0 5px 15px rgba(0,0,0,0.12);
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
     }
 
     .stat-box h3{
+
       margin-bottom:12px;
       font-size:1.8rem;
     }
@@ -204,7 +179,7 @@
 
       margin-top:20px;
 
-      box-shadow:0 5px 20px rgba(0,0,0,0.18);
+      box-shadow:0 8px 20px rgba(0,0,0,0.15);
     }
 
     /* CARDS */
@@ -214,23 +189,24 @@
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 
-      gap:28px;
-      margin-top:35px;
+      gap:30px;
+      margin-top:30px;
     }
 
     .card{
 
       background:white;
 
-      padding:24px;
+      padding:25px;
       border-radius:20px;
 
-      box-shadow:0 5px 20px rgba(0,0,0,0.08);
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
 
-      transition:0.3s;
+      transition:0.3s ease;
     }
 
     .card:hover{
+
       transform:translateY(-8px);
     }
 
@@ -238,25 +214,28 @@
 
       color:#14532d;
       margin-bottom:15px;
+
+      font-size:1.7rem;
     }
 
     .card img{
 
       width:100%;
-      border-radius:14px;
+      border-radius:12px;
 
-      margin-top:15px;
+      margin-top:18px;
     }
 
     /* LIST */
 
     ul{
-      padding-left:25px;
+      padding-left:30px;
       margin-top:20px;
     }
 
     li{
-      margin-bottom:12px;
+      margin-bottom:14px;
+      font-size:1.05rem;
     }
 
     /* FOOTER */
@@ -310,7 +289,7 @@
 
 <body>
 
-<!-- HERO -->
+<!-- HERO SECTION -->
 
 <header>
 
@@ -328,17 +307,12 @@
 
     <p>
 
-      3D Forest Structure Analysis and Ecological Habitat Assessment
-      using Handheld LiDAR and Ground-Based Ecological Measurements
-      in the Shola Forests of Kodaikanal.
+      Developing a LiDAR-based ecological analysis system for understanding
+      forest structure, canopy complexity, habitat variability,
+      and spatial distribution of trees within the shola forests
+      of Kodaikanal using handheld LiDAR and ecological ground-truth measurements.
 
     </p>
-
-    <a href="#overview" class="hero-btn">
-
-      Explore Project
-
-    </a>
 
   </div>
 
@@ -366,11 +340,11 @@
 
   <p>
 
-    This project focuses on studying forest structure and habitat complexity
-    using handheld LiDAR data combined with ecological field observations.
-    The analysis includes canopy structure, vegetation density,
-    habitat openness, GBH estimation, and spatial distribution
-    of trees within the shola forests of Kodaikanal.
+    This project focuses on analyzing forest habitat structure using handheld
+    LiDAR data integrated with ecological field observations.
+    The study includes canopy height modelling, vegetation density analysis,
+    habitat openness assessment, GBH estimation, and spatial mapping
+    of trees within Bombay Shola, Kodaikanal.
 
   </p>
 
@@ -378,30 +352,30 @@
 
     <div class="stat-box">
 
-      <h3>Field Survey</h3>
+      <h3>LiDAR Mapping</h3>
 
       <p>
-        Ecological habitat observations and measurements.
+        High-resolution 3D forest structure visualization.
       </p>
 
     </div>
 
     <div class="stat-box">
 
-      <h3>LiDAR Analysis</h3>
+      <h3>Ecological Surveys</h3>
 
       <p>
-        3D forest structure interpretation and mapping.
+        Ground-truth habitat and vegetation measurements.
       </p>
 
     </div>
 
     <div class="stat-box">
 
-      <h3>Habitat Assessment</h3>
+      <h3>Forest Analysis</h3>
 
       <p>
-        Canopy structure and vegetation analysis.
+        Canopy structure and habitat variability assessment.
       </p>
 
     </div>
@@ -414,7 +388,7 @@
 
 <section id="video">
 
-  <h2>LiDAR 3D View</h2>
+  <h2>LiDAR 3D Forest View</h2>
 
   <iframe
   src="https://drive.google.com/file/d/14n9kHZyQnLvRv5JK-XkrV4owBSZZPxbO/preview"
@@ -436,7 +410,7 @@
       <h3>Habitat Documentation</h3>
 
       <p>
-        Habitat photograph showing vegetation structure and canopy condition.
+        Habitat photograph showing canopy condition and vegetation structure.
       </p>
 
       <img src="habitat.jpg" alt="Habitat">
@@ -460,7 +434,7 @@
       <h3>Forest Structure</h3>
 
       <p>
-        Representation of canopy layering and vegetation complexity.
+        Visualization of canopy layering and vertical forest complexity.
       </p>
 
       <img src="Vertical-Forest-structure.jpg" alt="Forest Structure">
@@ -484,7 +458,7 @@
       <h3>GBH Measurement</h3>
 
       <p>
-        Ground-truth measurement of tree girth during field survey.
+        Ground-truth GBH measurements during field survey.
       </p>
 
       <img src="FD-Measuring-the-GBH.jpg" alt="GBH Measurement">
@@ -500,6 +474,30 @@
       </p>
 
       <img src="FIELD-WORK.jpg" alt="Field Work">
+
+    </div>
+
+    <div class="card">
+
+      <h3>Forest Department Survey</h3>
+
+      <p>
+        Habitat observations and forest measurements with TNFD.
+      </p>
+
+      <img src="FD.jpg" alt="Forest Department">
+
+    </div>
+
+    <div class="card">
+
+      <h3>Tree Measurement</h3>
+
+      <p>
+        Individual tree measurements for ecological validation.
+      </p>
+
+      <img src="Measuring-the-GBH.jpg" alt="Tree Measurement">
 
     </div>
 
@@ -520,7 +518,7 @@
       <h3>Canopy Height Model</h3>
 
       <p>
-        LiDAR-derived canopy height model representing vertical forest structure.
+        LiDAR-derived canopy height model representing forest structure.
       </p>
 
       <img src="bombay_shola_chm.png" alt="Canopy Height Model">
@@ -532,7 +530,7 @@
       <h3>GBH Distribution</h3>
 
       <p>
-        Distribution of GBH measurements collected during ecological assessment.
+        Distribution of GBH measurements collected during field assessment.
       </p>
 
       <img src="GBH-Distribution.png" alt="GBH Distribution">
@@ -541,13 +539,13 @@
 
     <div class="card">
 
-      <h3>Height Vs GBH</h3>
+      <h3>Height vs GBH</h3>
 
       <p>
         Relationship between tree height and GBH observed during habitat analysis.
       </p>
 
-      <img src="HeightVsGBH.png" alt="Height Vs GBH">
+      <img src="HeightVsGBH.jpg" alt="Height vs GBH">
 
     </div>
 
@@ -556,10 +554,10 @@
       <h3>Tree Distribution Map</h3>
 
       <p>
-        Spatial distribution map showing individual tree positions across the plot.
+        Spatial distribution map showing individual tree positions.
       </p>
 
-      <img src="Tree-Distribution-map.png" alt="Tree Distribution Map">
+      <img src="Tree-Distribution-map.png" alt="Tree Distribution">
 
     </div>
 
@@ -568,11 +566,10 @@
       <h3>Tree Height Distribution</h3>
 
       <p>
-        Distribution of tree heights derived from LiDAR-based structural analysis.
+        Distribution of tree heights derived from LiDAR analysis.
       </p>
 
-      <img src="Tree-Height-Distribution.png"
-      alt="Tree Height Distribution">
+      <img src="Tree-Height-Distribution.png" alt="Tree Height Distribution">
 
     </div>
 
@@ -584,40 +581,15 @@
         Spatial mapping of trees identified during habitat analysis.
       </p>
 
-      <img src="Spatial distribution of trees.png"
-      alt="Spatial Distribution of Trees">
-
-    </div>
-
-    <div class="card">
-
-      <h3>Vertical Forest Structure</h3>
-
-      <p>
-        Visualization of vertical canopy layering and forest complexity.
-      </p>
-
-      <img src="Vertical Forest Structure.png"
-      alt="Vertical Forest Structure">
-
-    </div>
-
-    <div class="card">
-
-      <h3>Height Vs GBH Analysis</h3>
-
-      <p>
-        Statistical relationship between tree height and girth measurements.
-      </p>
-
-      <img src="Height Vs GBH.png"
-      alt="Height Vs GBH Analysis">
+      <img src="Spatial-distribution-of-trees.jpg"
+      alt="Spatial Distribution">
 
     </div>
 
   </div>
 
 </section>
+
 <!-- ANALYSIS -->
 
 <section id="analysis">
@@ -668,12 +640,12 @@
 
     <div class="card">
 
-      <h3>Field Observation</h3>
+      <h3>Field Validation</h3>
 
       <p>
 
-        Ground observations supported interpretation
-        of LiDAR-derived habitat structure.
+        Ground observations supported the interpretation
+        of LiDAR-derived habitat structure and canopy patterns.
 
       </p>
 
@@ -700,15 +672,15 @@
     </li>
 
     <li>
-      Open canopy patches and dense vegetation zones were distinguishable.
-    </li>
-
-    <li>
-      Ground observations supported LiDAR-derived habitat analysis.
+      Canopy gaps and dense vegetation zones were clearly distinguishable.
     </li>
 
     <li>
       Spatial analysis revealed variation in tree density across the forest.
+    </li>
+
+    <li>
+      Ground observations supported LiDAR-derived ecological interpretation.
     </li>
 
   </ul>
@@ -723,12 +695,12 @@
 
   <p>
 
-    This project demonstrated the usefulness of handheld LiDAR
+    This project demonstrates the usefulness of handheld LiDAR
     for ecological habitat assessment and forest structure analysis.
-    Combining LiDAR data with field observations provided detailed
-    insights into canopy structure, vegetation density,
-    habitat openness, and spatial variability within
-    the shola forests of Kodaikanal.
+    Integrating LiDAR data with ecological field measurements provided
+    detailed insights into canopy structure, vegetation density,
+    habitat openness, and spatial variability within the
+    shola forests of Kodaikanal.
 
   </p>
 
