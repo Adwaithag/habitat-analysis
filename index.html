@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -26,17 +27,21 @@
       line-height:1.7;
     }
 
+    /* HERO SECTION */
+
     header{
 
       background:
-      linear-gradient(rgba(0,0,0,0.55),
-      rgba(0,0,0,0.55)),
-      url("Habitat.jpg");
+      linear-gradient(
+      rgba(0,0,0,0.65),
+      rgba(0,0,0,0.65)),
+      url("front-page.jpg");
 
       background-size:cover;
       background-position:center;
+      background-attachment:fixed;
 
-      height:90vh;
+      height:100vh;
 
       display:flex;
       justify-content:center;
@@ -50,17 +55,48 @@
     }
 
     .hero{
-      max-width:900px;
+      max-width:950px;
     }
 
     header h1{
-      font-size:4rem;
+
+      font-size:5rem;
       margin-bottom:20px;
+
+      text-shadow:0 5px 15px rgba(0,0,0,0.5);
     }
 
     header p{
-      font-size:1.3rem;
+
+      font-size:1.4rem;
+      text-shadow:0 3px 10px rgba(0,0,0,0.5);
     }
+
+    .hero-btn{
+
+      display:inline-block;
+      margin-top:35px;
+
+      background:#22c55e;
+      color:white;
+
+      padding:15px 35px;
+
+      border-radius:50px;
+      text-decoration:none;
+
+      font-weight:bold;
+      font-size:1.1rem;
+
+      transition:0.3s;
+    }
+
+    .hero-btn:hover{
+      background:#16a34a;
+      transform:translateY(-3px);
+    }
+
+    /* LOGOS */
 
     .logos{
 
@@ -74,23 +110,29 @@
 
     .logos img{
 
-      height:70px;
+      height:75px;
       background:white;
 
       padding:8px;
       border-radius:12px;
+
+      box-shadow:0 5px 15px rgba(0,0,0,0.25);
     }
+
+    /* NAVBAR */
 
     nav{
 
       background:#14532d;
 
-      padding:15px;
+      padding:18px;
       text-align:center;
 
       position:sticky;
       top:0;
       z-index:1000;
+
+      box-shadow:0 3px 10px rgba(0,0,0,0.2);
     }
 
     nav a{
@@ -100,14 +142,17 @@
 
       margin:0 18px;
       font-weight:bold;
+      font-size:1rem;
     }
 
     nav a:hover{
       color:#bbf7d0;
     }
 
+    /* SECTIONS */
+
     section{
-      padding:70px 12%;
+      padding:80px 12%;
     }
 
     h2{
@@ -115,8 +160,10 @@
       color:#14532d;
       margin-bottom:25px;
 
-      font-size:2.3rem;
+      font-size:2.5rem;
     }
+
+    /* STATS */
 
     .stats{
 
@@ -124,7 +171,7 @@
       grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
 
       gap:20px;
-      margin-top:35px;
+      margin-top:40px;
     }
 
     .stat-box{
@@ -132,72 +179,78 @@
       background:#14532d;
       color:white;
 
-      padding:30px;
-      border-radius:15px;
+      padding:35px;
+      border-radius:18px;
 
       text-align:center;
+
+      box-shadow:0 5px 15px rgba(0,0,0,0.12);
     }
 
     .stat-box h3{
-
-      margin-bottom:10px;
-      font-size:1.7rem;
+      margin-bottom:12px;
+      font-size:1.8rem;
     }
+
+    /* VIDEO */
 
     iframe{
 
       width:100%;
-      height:550px;
+      height:600px;
 
       border:none;
-      border-radius:15px;
+      border-radius:18px;
 
       margin-top:20px;
 
-      box-shadow:0 5px 15px rgba(0,0,0,0.15);
+      box-shadow:0 5px 20px rgba(0,0,0,0.18);
     }
+
+    /* CARDS */
 
     .card-grid{
 
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 
-      gap:25px;
-      margin-top:30px;
+      gap:28px;
+      margin-top:35px;
     }
 
     .card{
 
       background:white;
 
-      padding:22px;
-      border-radius:18px;
+      padding:24px;
+      border-radius:20px;
 
-      box-shadow:0 5px 15px rgba(0,0,0,0.08);
+      box-shadow:0 5px 20px rgba(0,0,0,0.08);
 
       transition:0.3s;
     }
 
     .card:hover{
-      transform:translateY(-6px);
-    }
-
-    .card img{
-
-      width:100%;
-      border-radius:12px;
-
-      margin-top:15px;
+      transform:translateY(-8px);
     }
 
     .card h3{
 
       color:#14532d;
-      margin-bottom:12px;
+      margin-bottom:15px;
     }
 
-    ul{
+    .card img{
 
+      width:100%;
+      border-radius:14px;
+
+      margin-top:15px;
+    }
+
+    /* LIST */
+
+    ul{
       padding-left:25px;
       margin-top:20px;
     }
@@ -206,21 +259,25 @@
       margin-bottom:12px;
     }
 
+    /* FOOTER */
+
     footer{
 
       background:#14532d;
       color:white;
 
       text-align:center;
-      padding:30px;
+      padding:35px;
 
-      margin-top:40px;
+      margin-top:50px;
     }
+
+    /* MOBILE */
 
     @media(max-width:768px){
 
       header h1{
-        font-size:2.5rem;
+        font-size:2.8rem;
       }
 
       header p{
@@ -228,13 +285,13 @@
       }
 
       section{
-        padding:55px 8%;
+        padding:60px 8%;
       }
 
       nav a{
 
         display:block;
-        margin:10px 0;
+        margin:12px 0;
       }
 
       iframe{
@@ -253,6 +310,8 @@
 
 <body>
 
+<!-- HERO -->
+
 <header>
 
   <div class="logos">
@@ -269,15 +328,23 @@
 
     <p>
 
-      Developing a LiDAR-based forest analysis system to detect individual trees,
-      estimate structural variables, and compare forest habitats using
-      ecological ground-truth measurements from Kodaikanal.
+      3D Forest Structure Analysis and Ecological Habitat Assessment
+      using Handheld LiDAR and Ground-Based Ecological Measurements
+      in the Shola Forests of Kodaikanal.
 
     </p>
+
+    <a href="#overview" class="hero-btn">
+
+      Explore Project
+
+    </a>
 
   </div>
 
 </header>
+
+<!-- NAVBAR -->
 
 <nav>
 
@@ -290,6 +357,8 @@
   <a href="#conclusion">Conclusion</a>
 
 </nav>
+
+<!-- OVERVIEW -->
 
 <section id="overview">
 
@@ -341,6 +410,8 @@
 
 </section>
 
+<!-- VIDEO -->
+
 <section id="video">
 
   <h2>LiDAR 3D View</h2>
@@ -351,6 +422,8 @@
   </iframe>
 
 </section>
+
+<!-- GALLERY -->
 
 <section id="gallery">
 
@@ -430,33 +503,11 @@
 
     </div>
 
-    <div class="card">
-
-      <h3>Forest Department Field Work</h3>
-
-      <p>
-        Additional habitat measurements and ecological observations.
-      </p>
-
-      <img src="FD.jpg" alt="FD Work">
-
-    </div>
-
-    <div class="card">
-
-      <h3>Tree Measurement</h3>
-
-      <p>
-        Individual tree measurements carried out during field validation.
-      </p>
-
-      <img src="Measuring-the-GBH.jpg" alt="Tree Measurement">
-
-    </div>
-
   </div>
 
 </section>
+
+<!-- GRAPHS -->
 
 <section id="graphs">
 
@@ -469,12 +520,10 @@
       <h3>Canopy Height Model</h3>
 
       <p>
-        LiDAR-derived canopy height model representing
-        vertical forest structure and canopy variability.
+        LiDAR-derived canopy height model representing vertical forest structure.
       </p>
 
-      <img src="bombay_shola_chm.png"
-      alt="Canopy Height Model">
+      <img src="Canopy-height-model.jpg" alt="Canopy Height Model">
 
     </div>
 
@@ -483,11 +532,11 @@
       <h3>GBH Distribution</h3>
 
       <p>
-        Distribution of GBH measurements collected
-        during ecological field assessment.
+        Distribution of GBH measurements collected during field assessment.
       </p>
 
       <img src="GBH-Distribution.jpg" alt="GBH Distribution">
+
     </div>
 
     <div class="card">
@@ -495,12 +544,10 @@
       <h3>Height vs GBH</h3>
 
       <p>
-        Relationship between tree height and GBH
-        observed during habitat analysis.
+        Relationship between tree height and GBH observed during habitat analysis.
       </p>
 
-      <img src="HeightVsGBH.jpg"
-      alt="Height vs GBH">
+      <img src="HeightVsGBH.jpg" alt="Height vs GBH">
 
     </div>
 
@@ -509,8 +556,7 @@
       <h3>Tree Distribution Map</h3>
 
       <p>
-        Spatial distribution map showing
-        individual tree positions across the plot.
+        Spatial distribution map showing individual tree positions across the plot.
       </p>
 
       <img src="Tree-Distribution-map.jpg" alt="Tree Distribution">
@@ -522,11 +568,11 @@
       <h3>Tree Height Distribution</h3>
 
       <p>
-        Distribution of tree heights derived
-        from LiDAR-based structural analysis.
+        Distribution of tree heights derived from LiDAR-based analysis.
       </p>
 
       <img src="Tree-Height-Distribution.jpg" alt="Tree Height Distribution">
+
     </div>
 
     <div class="card">
@@ -534,8 +580,7 @@
       <h3>Spatial Distribution of Trees</h3>
 
       <p>
-        Spatial mapping of trees identified
-        during habitat analysis.
+        Spatial mapping of trees identified during habitat analysis.
       </p>
 
       <img src="spatial-distribution-of-trees.jpg"
@@ -546,6 +591,9 @@
   </div>
 
 </section>
+
+<!-- ANALYSIS -->
+
 <section id="analysis">
 
   <h2>Ecological Analysis</h2>
@@ -609,6 +657,8 @@
 
 </section>
 
+<!-- FINDINGS -->
+
 <section id="findings">
 
   <h2>Key Findings</h2>
@@ -639,6 +689,8 @@
 
 </section>
 
+<!-- CONCLUSION -->
+
 <section id="conclusion">
 
   <h2>Conclusion</h2>
@@ -655,6 +707,8 @@
   </p>
 
 </section>
+
+<!-- FOOTER -->
 
 <footer>
 
